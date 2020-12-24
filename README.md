@@ -10,7 +10,7 @@
 * update with gitaupdate2.sql
 * optional try upanishad.sql
 
-<code>
+'''
 $ sqlite3 gita.db
 sqlite> .read <filename>
 
@@ -19,6 +19,6 @@ sqlite> .read gita.sql
 sqlite> .read gitaupdate1.sql
 sqlite> .read gitaupdate2.sql
 sqlite> .read upanishad.sql
-</code>
+'''
 
 ### Copyright Dev Bhattacharyya
