@@ -1,0 +1,43 @@
+version: '3.1'
+
+# docker-compose.yaml
+# krizn app
+# author devb
+# modified: 11/5/20
+
+services:
+
+  # app
+  krizn:
+    build: .
+    ports:
+      - "8060:5000"
+    volumes:
+      - .:/krizn
+    environment:
+      FLASK_ENV: development
+    networks:
+      - kz
+
+  # database
+  # mongodb_container:
+  #  image: localhost:5000/mongo:dev
+  #  environment:
+  #    MONGO_INITDB_ROOT_USERNAME: root
+  #    MONGO_INITDB_ROOT_PASSWORD: rootpassword
+  #  ports:
+  #    - 27017:27017
+  #  volumes:
+  #    - mongodb_data_container:/data/db
+  #  networks:
+  #    - kz
+
+# volume
+# volumes:
+  # mongodb_data_container:
+
+# docker networks
+networks:
+  kz:
+    driver: bridge
+

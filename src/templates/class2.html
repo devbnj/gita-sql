@@ -1,0 +1,31 @@
+<!-- templates/profile.html -->
+
+{% extends "base2.html" %}
+
+{% block content %}
+<div cass="w3-container w3-row">
+<h1 class="w3-center">Bhagavad Gita</h1>
+<p class="w3-center"><a href="{{ url_for('main.advprev') }}" class="w3-button w3-blue"><i class="fa fa-arrow-left"></i> Prev</a>
+<a href="{{ url_for('main.advnext') }}" class="w3-button w3-green"><i class="fa fa-arrow-right"></i> Next</a></p>    
+<p class="w3-left">{{ name }}</p>
+</div>
+
+<br />
+
+<div class="w3-container w3-card-2 w3-row">
+{% for post in post1 %}
+<h2 class="w3-pale-red">{{ post.origchapter }}</h2>
+<h2 class="w3-orange">{{ post.origchapternum }} <strong>{{ post.sanskrit_main }}</strong></h2>
+<ul class="w3-ul w3-border w3-pale-green">
+<li>{{ post.sanskrit1 }}</li>
+<li>{{ post.sanskrit2 }}</li>
+<li>{{ post.sanskrit3 }}</li>
+<li>{{ post.sanskrit4 }}</li>
+<li>{{ post.sanskrit5 }}</li>
+<li>{{ post.sanskrit6 }}</li>
+</ul>
+<p>{{ post.trasliter_my }}</p>
+{% endfor %}
+</div>
+
+{% endblock %}

@@ -21,4 +21,16 @@ sqlite> .read gitaupdate2.sql
 sqlite> .read upanishad.sql
 ```
 
+### To build the python-flask software
+### You will need docker and docker-compose installed
+### Please ensure you fix the install folder in Makefile
+```
+# cleanup
+make cleanup
+# build
+make build
+# prune
+make prune
+```
+
 ### Copyright Dev Bhattacharyya

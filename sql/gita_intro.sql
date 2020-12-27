@@ -6,13 +6,23 @@
 -- Database: gita.db
 -- 
 
-PRAGMA encoding="UTF-8";
+PRAGMA encoding = "UTF-8";
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table gitaintro
 --
+DROP TABLE IF EXISTS user;
+CREATE TABLE user (
+        id INTEGER NOT NULL, 
+        email VARCHAR(100), 
+        password VARCHAR(100), 
+        name VARCHAR(1000), 
+        bgcode text, 
+        PRIMARY KEY (id), 
+        UNIQUE (email)
+);
 
 DROP TABLE IF EXISTS gitaintro;
 CREATE TABLE IF NOT EXISTS gitaintro (
